@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="12dp"
+        app:cardBackgroundColor="@color/secondaryBackground"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/item_repository_avatar"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/item_repository_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/mainTextColor"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/item_repository_avatar"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Repository name" />
+
+            <TextView
+                android:id="@+id/item_repository_owner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/mainTextColor"
+                android:textSize="12sp"
+                app:drawableStartCompat="@drawable/ic_user"
+                app:layout_constraintStart_toStartOf="@id/item_repository_name"
+                app:layout_constraintTop_toBottomOf="@id/item_repository_name"
+                tools:text="@tools:sample/full_names" />
+
+            <TextView
+                android:id="@+id/item_repository_forks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="4dp"
+                android:textColor="@color/mainTextColor"
+                android:textSize="12sp"
+                app:drawableStartCompat="@drawable/ic_forks"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/item_repository_name"
+                tools:text="45" />
+
+            <TextView
+                android:id="@+id/item_repository_issues"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:drawablePadding="4dp"
+                android:textColor="@color/mainTextColor"
+                android:textSize="12sp"
+                app:drawableStartCompat="@drawable/ic_issues"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/item_repository_forks"
+                tools:text="85" />
+
+            <TextView
+                android:id="@+id/item_repository_watchers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:drawablePadding="4dp"
+                android:textColor="@color/mainTextColor"
+                android:textSize="12sp"
+                app:drawableStartCompat="@drawable/ic_watchers"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/item_repository_issues"
+                tools:text="8554" />
+
+            <TextView
+                android:id="@+id/item_repository_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textColor="@color/hintTextColor"
+                android:textSize="9sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="20.20.2020" />
+
+            <TextView
+                android:id="@+id/item_repository_language"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textColor="@color/mainTextColor"
+                android:textSize="9sp"
+                app:layout_constraintBottom_toTopOf="@id/item_repository_date"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="Java" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

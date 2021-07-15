@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/baseBackground"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_octocat" />
+
+        <EditText
+            android:id="@+id/login_input_token"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="64dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_input_search"
+            android:elevation="4dp"
+            android:hint="@string/hint_token"
+            android:inputType="text"
+            android:padding="4dp"
+            android:textSize="14sp"
+            android:textColorHint="@color/hintTextColor"
+            android:textColor="@color/inputTextField"/>
+
+        <TextView
+            android:id="@+id/login_label_token"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/mainTextColor"
+            android:text="@string/label_how_get_token"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/login_button_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="80dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/bg_button"
+            android:elevation="8dp"
+            android:padding="8dp"
+            android:text="@string/button_login"
+            android:textAlignment="center"
+            android:textColor="@color/mainTextColor"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</layout>

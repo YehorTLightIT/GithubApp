@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Github App</string>
+
+    <string name="search_hint">Enter repository name</string>
+    <string name="main_hint_no_results">No repositories found</string>
+    <string name="main_hint_error">Some error occurred!\nPlease try again</string>
+    <string name="main_hint_start">Please type some text to search repositories</string>
+    <string name="label_details_owner_info">Owner info:</string>
+    <string name="label_details_from">From:</string>
+    <string name="label_details_with_github_from">With Github from:</string>
+    <string name="label_details_public_repositories">Public repositories:</string>
+    <string name="label_details_programming_language">Programming language:</string>
+    <string name="label_details_created_at">Created at:</string>
+    <string name="label_details_last_updated_at">Last updated at:</string>
+    <string name="label_details_default_branch">Default branch:</string>
+    <string name="label_details_size">Size:</string>
+    <string name="label_details_button_open_in_browser">Open in browser</string>
+    <string name="placeholder_details_kb">%d KB</string>
+    <string name="repo_language_empty">Unknown</string>
+    <string name="hint_login">Login</string>
+    <string name="hint_password">Password</string>
+    <string name="button_login">Login</string>
+    <string name="hint_token">Enter you personal token</string>
+    <string name="label_how_get_token"><u>How to get token?</u></string>
+
+    <string name="toast_login_error">Something going wrong! Check you token and internet connection!</string>
+    <string name="label_followers">Followers:</string>
+    <string name="label_following">Following:</string>
+    <string name="label_email">E-mail:</string>
+    <string name="label_button_logout">Logout</string>
+
+    <string name="toast_go_pro">Install pro version to see details!</string>
+</resources>

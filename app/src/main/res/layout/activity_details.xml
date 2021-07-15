@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/baseBackground"
+            android:clipToPadding="false"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/details_avatar"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.5"
+                tools:src="@tools:sample/avatars" />
+
+            <LinearLayout
+                android:id="@+id/details_user_info_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/details_avatar"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_details_owner_info"
+                    android:textColor="@color/hintTextColor"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/details_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/mainTextColor"
+                    android:textSize="18sp"
+                    tools:text="@tools:sample/full_names" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/label_details_from"
+                    android:textColor="@color/hintTextColor"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/details_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/mainTextColor"
+                    android:textSize="18sp"
+                    tools:text="@tools:sample/cities" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/label_details_with_github_from"
+                    android:textColor="@color/hintTextColor"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/details_user_creation_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/mainTextColor"
+                    android:textSize="18sp"
+                    tools:text="@tools:sample/date/ddmmyy" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/label_details_public_repositories"
+                    android:textColor="@color/hintTextColor"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/details_repos_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/mainTextColor"
+                    android:textSize="18sp"
+                    tools:text="87" />
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/details_top_barrier"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="details_avatar, details_user_info_container" />
+
+            <TextView
+                android:id="@+id/details_repo_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textColor="@color/mainTextColor"
+                android:textSize="24sp"
+                app:layout_constraintTop_toBottomOf="@id/details_top_barrier"
+                tools:text="Repository Name" />
+
+            <TextView
+                android:id="@+id/details_repository_forks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:drawablePadding="4dp"
+                android:textColor="@color/mainTextColor"
+                android:textSize="14sp"
+                app:drawableStartCompat="@drawable/ic_forks"
+                app:layout_constraintEnd_toStartOf="@id/details_repository_issues"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/details_repo_name"
+                tools:text="45" />
+
+            <TextView
+                android:id="@+id/details_repository_issues"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:drawablePadding="4dp"
+                android:textColor="@color/mainTextColor"
+                android:textSize="14sp"
+                app:drawableStartCompat="@drawable/ic_issues"
+                app:layout_constraintEnd_toStartOf="@id/details_repository_watchers"
+                app:layout_constraintStart_toEndOf="@id/details_repository_forks"
+                app:layout_constraintTop_toBottomOf="@id/details_repo_name"
+                tools:text="85" />
+
+            <TextView
+                android:id="@+id/details_repository_watchers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:drawablePadding="4dp"
+                android:textColor="@color/mainTextColor"
+                android:textSize="14sp"
+                app:drawableStartCompat="@drawable/ic_watchers"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/details_repository_issues"
+                app:layout_constraintTop_toBottomOf="@id/details_repo_name"
+                tools:text="8554" />
+
+            <TextView
+                android:id="@+id/details_repo_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textAlignment="center"
+                android:textColor="@color/mainTextColor"
+                app:layout_constraintTop_toBottomOf="@id/details_repository_issues" />
+
+            <LinearLayout
+                android:id="@+id/details_repository_info_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/details_repo_description">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_details_programming_language"
+                    android:textColor="@color/hintTextColor"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/details_language"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/mainTextColor"
+                    android:textSize="18sp"
+                    tools:text="Unknown" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/label_details_created_at"
+                    android:textColor="@color/hintTextColor"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/details_creation_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/mainTextColor"
+                    android:textSize="18sp"
+                    tools:text="@tools:sample/date/ddmmyy" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/label_details_last_updated_at"
+                    android:textColor="@color/hintTextColor"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/details_updated_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/mainTextColor"
+                    android:textSize="18sp"
+                    tools:text="@tools:sample/date/ddmmyy" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/label_details_default_branch"
+                    android:textColor="@color/hintTextColor"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/details_branch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/mainTextColor"
+                    android:textSize="18sp"
+                    tools:text="master" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/label_details_size"
+                    android:textColor="@color/hintTextColor"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/details_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/mainTextColor"
+                    android:textSize="18sp"
+                    tools:text="5000 KB" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/details_button_open_in_browser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="64dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/bg_button"
+                android:elevation="8dp"
+                android:padding="8dp"
+                android:text="@string/label_details_button_open_in_browser"
+                android:textAlignment="center"
+                android:textColor="@color/mainTextColor"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@id/details_repository_info_container" />
+
+            <ProgressBar
+                android:id="@+id/details_progress"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginTop="160dp"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/mainTextColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>
